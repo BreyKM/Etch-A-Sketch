@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2e7f8;
+}
+
+.title {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+/* settings */
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-left: 2rem;
+  width: 20vw;
+}
+input[type="color"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.05s ease-in-out;
+  margin-left: 7rem;
+}
+
+input[type="color"]:hover {
+  transform: scale(1.2);
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border: none;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50px;
+  box-shadow: #c0b6ff 0 7px 8px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border-color: #c0b6ff;
+  box-shadow: 3px 3px 10px #9383f7;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.activeBtn {
+  background-color: #c0b6ff;
+  color: #faf7fb;
+}
+
+.inactiveBtn {
+  background-color: transparent;
+}
+
+.sizeValue {
+  text-align: center;
+  font-size: 2rem;
+}
+
+input[type="range"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #9383f7;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 10px;
+  border: 1px solid black;
+  border-radius: 30px;
+  background: #9383f7;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+  margin-top: -8px;
+  background: #c0b6ff;
+  border: 1px solid black;
+  transition: 0.2s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.3);
+}
+
+.canvas-grid {
+    display: grid;
+    width: 600px;
+    height: 600px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
