@@ -1,6 +1,6 @@
 // Variables //
 const DEFAULT_MODE = "color";
-const DEFAULT_COLOR = "#000000";
+const DEFAULT_COLOR = "#C0B6FF";
 const DEFAULT_SIZE = 16;
 
 const colorPicker = document.getElementById("color-picker");
@@ -103,7 +103,7 @@ function setupGrid(size) {
     gridElement.classList.add("grid-element");
     gridElement.addEventListener("mousedown", changeColor);
     gridElement.addEventListener("mouseover", changeColor);
-    
+
     canvasGrid.appendChild(gridElement);
   }
 }
@@ -119,17 +119,18 @@ function changeColor(e) {
     e.target.style.backgroundColor = currentColor;
   } else if (currentMode === "eraser") {
     e.target.style.backgroundColor = "#FFFFFF";
-    
-  } else if (currentMode === 'shader') {
+  } else if (currentMode === "shader") {
     if (e.target.style.backgroundColor.match(/rgba/)) {
-        let currentOpacity = Number(e.target.style.backgroundColor.slice(-4, -1));
-        if (currentOpacity <= 0.9) {
-            e.target.style.backgroundColor = `rgba(0, 0, 0, ${currentOpacity + 0.1})`;
-        }
-    } else if (e.target.style.backgroundColor == 'rgb(0, 0, 0)') {
-        return;
+      let currentOpacity = Number(e.target.style.backgroundColor.slice(-4, -1));
+      if (currentOpacity <= 0.9) {
+        e.target.style.backgroundColor = `rgba(0, 0, 0, ${
+          currentOpacity + 0.1
+        })`;
+      }
+    } else if (e.target.style.backgroundColor == "rgb(0, 0, 0)") {
+      return;
     } else {
-        e.target.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';  
+      e.target.style.backgroundColor = "rgba(0, 0, 0, 0.1)";
     }
   }
 }
